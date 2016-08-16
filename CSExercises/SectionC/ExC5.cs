@@ -17,15 +17,43 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
-            //YOUR CODE HERE
+            Console.WriteLine("PLEASE ENTER ONLY 3 DIGIT NUMBER");
 
+            int n = int.Parse(Console.ReadLine());
+
+            bool result = IsArmstrongNumber(n);
+            //YOUR CODE HERE
+            Console.WriteLine(result);
         }
 
 
         public static bool IsArmstrongNumber(int n)
         {
-            //YOUR CODE HERE
-            return false;
+            int temp = n%10;
+
+            int x = temp * temp * temp;
+
+            int temp1 = n / 10;
+
+            int temp2 = temp1 % 10;
+
+            int y = temp2 * temp2 * temp2;
+
+            int temp3 = temp1 / 10;
+
+            int z = temp3 * temp3 * temp3;
+
+            int final = x + y + z;
+
+            if (final == n)
+            {
+                return true;
+            }
+            else
+            {
+                //YOUR CODE HERE
+                return false;
+            }
 
         }
     }

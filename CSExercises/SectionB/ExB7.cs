@@ -18,13 +18,19 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
+            String input = Console.ReadLine();
+            double km = Convert.ToDouble(input);
+
+            double result = CalculateFare(km);
+            Console.WriteLine(result);
             //YOUR CODE HERE
         }
 
         public static double CalculateFare(double distance)
         {
+            double fare = 2.40 + (distance * 0.40);
             //YOUR CODE HERE
-            return 0;
+            return fare;
 
         }
     }

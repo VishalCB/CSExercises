@@ -18,14 +18,29 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
+            String salary = Console.ReadLine();
+
+
+            
+            decimal x = Convert.ToDecimal(salary);
+            decimal result = CalculateIncome(x);
+            Console.WriteLine(" {0:C}",result);
+            
             //YOUR CODE HERE
 
         }
 
-        public static string CalculateIncome(string salaryStr)
+        public static decimal CalculateIncome(decimal salaryStr)
         {
+            
+            decimal housing = (salaryStr* 10) / 100;
+            decimal transport = (salaryStr * 3) / 100;
+            decimal totalincome = salaryStr + housing + transport;
+
+            return totalincome ;
+
             //YOUR CODE HERE
-            return null;
+           
         }
     }
 }

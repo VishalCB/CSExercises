@@ -21,7 +21,10 @@ namespace CSExercises
         public static void Main(string[] args)
         {
             string inputStr = Console.ReadLine();
-            double inputDbl = Convert.ToDouble(inputStr);
+            double x = Convert.ToDouble(inputStr);
+          
+            
+            Console.WriteLine(String.Format("{0:0.00}", x));
 
             //YOUR CODE HERE
 

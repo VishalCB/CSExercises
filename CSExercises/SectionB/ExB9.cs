@@ -16,13 +16,24 @@ namespace CSExercises
     {
         public static void Main(string[] args)
         {
+            String input = Console.ReadLine();
+            double km = Convert.ToDouble(input);
+
+            double result = CalculateFare(km);
+           
+
+            Console.WriteLine(String.Format("{0:0.0}", result));
             //YOUR CODE HERE
         }
 
         public static double CalculateFare(double distance)
         {
+            double fare = 2.40 + (distance * 0.40);
             //YOUR CODE HERE
-            return 0;
+            double roundval = Math.Pow(10, 1);
+
+            double fare1 = Math.Ceiling(fare * roundval) / roundval;
+            return fare1;
 
         }
     }
